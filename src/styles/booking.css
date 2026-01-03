@@ -1,0 +1,349 @@
+.booking-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-modal {
+    background: #ffffff;
+    width: 1000px;
+    border-radius: 16px;
+    padding: 50px;
+    position: relative;
+}
+
+.booking-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #6b7280;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.step-circle.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.step span {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.step span.active {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.booking-form h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 16px;
+}
+
+.booking-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+
+.booking-next {
+    background: #2563eb;
+    color: #ffffff;
+    padding: 12px 36px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+}
+
+/* PROGRESS BAR */
+.step-progress {
+    position: absolute;
+    top: 46px;
+    left: 80px;
+    right: 80px;
+    height: 4px;
+    background: #e5e7eb;
+    z-index: -1;
+}
+
+.step-progress-fill {
+    height: 100%;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+/* CAR TYPE STEP */
+.car-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.car-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.car-card:hover {
+    border-color: #2563eb;
+}
+
+.car-card.selected {
+    border: 2px solid #2563eb;
+    background: #eff6ff;
+}
+
+.car-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.car-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.car-card strong {
+    font-size: 14px;
+}
+
+/* FOOTER BUTTONS */
+.booking-footer.between {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.booking-back {
+    background: #ffffff;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    padding: 12px 36px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* DETAILS STEP */
+.details-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.details-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.details-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-form label {
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.details-form input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.details-form input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ================= PROGRESS BAR FIX ================= */
+
+.booking-steps-wrapper {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.step-progress {
+    position: absolute;
+    top: 22px;
+    /* aligns with circle centers */
+    left: 60px;
+    right: 60px;
+    height: 4px;
+    background: #e5e7eb;
+    /* gray base line */
+    border-radius: 4px;
+    z-index: 0;
+}
+
+.step-progress-fill {
+    height: 100%;
+    background: #2563eb;
+    /* blue progress */
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* make sure circles appear ABOVE the bar */
+.step {
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= FARE STEP ================= */
+
+.fare-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.fare-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.fare-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.fare-row span {
+    color: #6b7280;
+}
+
+.fare-row.highlight strong {
+    color: #2563eb;
+}
+
+.fare-note {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #9ca3af;
+    text-align: right;
+}
+
+/* ================= CONFIRMATION ================= */
+
+.confirm-box {
+    text-align: center;
+}
+
+.confirm-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.confirm-sub {
+    color: #6b7280;
+    margin: 8px 0 24px;
+}
+
+.confirm-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.confirm-left {
+    background: #f1f5f9;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.confirm-right div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.confirm-right .highlight strong {
+    color: #2563eb;
+}
+
+.confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.confirm-help {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #9ca3af;
+}

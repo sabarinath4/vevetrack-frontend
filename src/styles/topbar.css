@@ -1,0 +1,99 @@
+/* ===== VEVE TRACK TOP BAR ===== */
+
+.topbar {
+    background-color: #1e5bd8;
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LEFT BRAND */
+.topbar-brand {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* CENTER NAV */
+.topbar-nav {
+    display: flex;
+    gap: 32px;
+    font-size: 14px;
+}
+
+.topbar-nav a,
+.topbar-nav span {
+    color: #dbe5ff;
+    text-decoration: none;
+    padding-bottom: 6px;
+}
+
+.topbar-nav a.active {
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+}
+
+
+
+.topbar-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.topbar-user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topbar-dropdown {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.topbar-dropdown button {
+    padding: 10px 20px;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.topbar-dropdown button:hover {
+    background: #f3f4f6;
+}
+
+.caret {
+    font-size: 10px;
+    color: #dbe5ff;
+    margin-left: 2px;
+}
+
+/* Invisible click layer for better UX */
+.topbar-user-click {
+    position: absolute;
+    inset: 0;
+}
