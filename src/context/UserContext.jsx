@@ -4,8 +4,7 @@ export const UserContext = createContext()
 
 export function UserProvider({ children }) {
     const [user, setUser] = useState({
-        name: "David James",
-        image: "https://i.pravatar.cc/150?img=12",
+        isLoggedIn: false,
     })
 
     return (
