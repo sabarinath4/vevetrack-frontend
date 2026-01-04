@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { createPortal } from "react-dom"
+import "../../styles/booking.css"
+
 
 export default function BookingModal({ onClose }) {
     const [step, setStep] = useState(1)
